@@ -109,6 +109,21 @@ PowerPlantOfficer2Script:
 	end
 
 .ReturnedMachinePart:
+	checkevent EVENT_POWER_PLANT_ZAPDOS
+	iftrue .AlreadyFought
+	writetext PowerPlantOfficer2ManagerHasBeenCheerfulText
+	waitbutton
+	closetext
+	cry ZAPDOS
+	loadwildmon ZAPDOS, 60
+	startbattle
+	ifequal DRAW, .draw
+	setevent EVENT_POWER_PLANT_ZAPDOS
+.draw
+	reloadmapafterbattle
+	end
+
+.AlreadyFought:
 	writetext PowerPlantOfficer2ManagerHasBeenCheerfulText
 	waitbutton
 	closetext
@@ -288,6 +303,14 @@ PowerPlantOfficer2ManagerHasBeenCheerfulText:
 
 	para "the MANAGER has"
 	line "been cheerful."
+	
+	para "A shame about"
+	line "that big bird"
+	cont "we chased"
+	cont "out of here."
+	
+	para "Oh! Here it"
+	line "comes again!"
 	done
 
 PowerPlantGymGuide4MagnetTrainConsumesElectricityText:

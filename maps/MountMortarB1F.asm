@@ -30,11 +30,15 @@ MountMortarB1FKiyoScript:
 	promptbutton
 	waitsfx
 	readvar VAR_PARTYCOUNT
-	ifequal PARTY_LENGTH, .NoRoom
+	ifgreater PARTY_LENGTH - 2, .NoRoom
 	writetext MountMortarB1FReceiveMonText
 	playsound SFX_CAUGHT_MON
 	waitsfx
-	givepoke TYROGUE, 10
+	givepoke HITMONCHAN, 34
+	waitbutton
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke HITMONLEE, 34
 	setevent EVENT_GOT_TYROGUE_FROM_KIYO
 .GotTyrogue:
 	writetext MountMortarB1FKiyoGotTyrogueText
@@ -98,15 +102,12 @@ MountMortarB1FTyrogueRewardText:
 
 MountMortarB1FReceiveMonText:
 	text "<PLAYER> received"
-	line "TYROGUE."
+	line "HITMONCHAN."
 	done
 
 MountMortarB1FKiyoGotTyrogueText:
-	text "TYROGUE is a"
+	text "Those two are"
 	line "fighting-type."
-
-	para "It evolves into a"
-	line "tougher #MON."
 
 	para "Keep up the hard"
 	line "work. I'll keep"

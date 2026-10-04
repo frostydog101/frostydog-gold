@@ -304,8 +304,26 @@ IlexForestSignpost:
 	jumptext IlexForestSignpostText
 
 IlexForestShrineScript:
-	jumptext Text_IlexForestShrine
+	checkevent EVENT_ILEX_FOREST_MEW
+	iftrue .Quiet
+	checkevent EVENT_GOT_KINGS_ROCK_IN_SLOWPOKE_WELL
+	iffalse .Quiet
+	opentext
+	writetext Text_IlexForestShrine
+	waitbutton
+	closetext
+	cry MEW
+	loadwildmon MEW, 35
+	startbattle
+	ifequal DRAW, .Done
+	setevent EVENT_ILEX_FOREST_MEW
+.Done
+	reloadmapafterbattle
+	end
 
+.Quiet
+	jumptext Text_IlexForestShrine
+	
 MovementData_Farfetchd_Pos1_Pos2:
 	big_step UP
 	big_step UP
@@ -654,6 +672,8 @@ Text_IlexForestShrine:
 	para "It's in honor of"
 	line "the forest's"
 	cont "protector…"
+	cont "who LOVES royal"
+	cont "rocks."
 	done
 
 IlexForest_MapEvents:

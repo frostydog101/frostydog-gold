@@ -5,8 +5,8 @@ GiveShuckle:
 	xor a ; PARTYMON
 	ld [wMonType], a
 
-; Level 15 Shuckle.
-	ld a, SHUCKLE
+; Level 15 Shellder.
+	ld a, SHELLDER
 	ld [wCurPartySpecies], a
 	ld a, 15
 	ld [wCurPartyLevel], a
@@ -65,7 +65,7 @@ SpecialShuckleOT:
 	db "MANIA@"
 
 SpecialShuckleNickname:
-	db "SHUCKIE@"
+	db "SHELLY@"
 
 ReturnShuckie:
 	farcall SelectMonFromParty

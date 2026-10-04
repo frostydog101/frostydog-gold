@@ -779,13 +779,13 @@ IntroScene10:
 	ld bc, vTiles1 - vTiles0
 	call Decompress
 
-	ld c, CHIKORITA
+	ld c, BULBASAUR
 	ld de, vTiles0 tile $10
 	farcall Intro_GetMonFrontpic
-	ld c, CYNDAQUIL
+	ld c, CHARMANDER
 	ld de, vTiles0 tile $29
 	farcall Intro_GetMonFrontpic
-	ld c, TOTODILE
+	ld c, SQUIRTLE
 	ld de, vTiles0 tile $42
 	farcall Intro_GetMonFrontpic
 
@@ -1054,24 +1054,24 @@ Intro_FlashSilhouette:
 	ret
 
 Intro_LoadChikoritaPalette:
-	ld c, CHIKORITA
+	ld c, BULBASAUR
 	farcall Intro_LoadMonPalette
 	ret
 
 Intro_LoadCyndaquilPalette:
-	ld c, CYNDAQUIL
+	ld c, CHARMANDER
 	farcall Intro_LoadMonPalette
 	ret
 
 Intro_LoadTotodilePalette:
-	ld c, TOTODILE
+	ld c, SQUIRTLE
 	farcall Intro_LoadMonPalette
 	ret
 
 Intro_LoadCharizardPalette:
 	ldh a, [hCGB]
 	and a
-	ld c, CYNDAQUIL
+	ld c, CHARMANDER
 	jr nz, .got_mon
 	ld c, CHARIZARD
 .got_mon

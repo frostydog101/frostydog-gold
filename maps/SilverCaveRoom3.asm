@@ -7,8 +7,10 @@ SilverCaveRoom3_MapScripts:
 	def_callbacks
 
 Red:
-	special FadeOutMusic
 	faceplayer
+	checkevent EVENT_MT_SILVER_RED_BEATEN
+	iftrue .Mewtwo
+	special FadeOutMusic
 	opentext
 	writetext RedSeenText
 	waitbutton
@@ -17,6 +19,17 @@ Red:
 	loadtrainer RED, RED1
 	startbattle
 	dontrestartmapmusic
+	reloadmapafterbattle
+	setevent EVENT_MT_SILVER_RED_BEATEN
+.Mewtwo
+	opentext
+	writetext MtSilverMewtwoAppearsText
+	waitbutton
+	closetext
+	cry MEWTWO
+	loadwildmon MEWTWO, 70
+	startbattle
+	ifequal DRAW, .Fled
 	reloadmapafterbattle
 	special FadeOutMusic
 	opentext
@@ -34,6 +47,10 @@ Red:
 	credits
 	end
 
+.Fled
+	reloadmapafterbattle
+	end
+
 RedSeenText:
 	text "…"
 	line "…"
@@ -46,6 +63,12 @@ RedWinLossText:
 RedLeavesText:
 	text "…"
 	line "…"
+	done
+	
+MtSilverMewtwoAppearsText:
+	text "…A tremendous"
+	line "presence fills"
+	cont "the summit."
 	done
 
 SilverCaveRoom3_MapEvents:

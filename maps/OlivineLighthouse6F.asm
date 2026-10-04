@@ -44,7 +44,7 @@ OlivineLighthouseJasmine:
 	promptbutton
 	closetext
 	special RestartMapMusic
-	cry AMPHAROS
+	cry PIKACHU
 	special FadeOutToWhite
 	pause 10
 	special FadeInFromWhite
@@ -180,7 +180,7 @@ JasmineCianwoodPharmacyText:
 	line "the sea…"
 
 	para "And I can't leave"
-	line "AMPHY unattended…"
+	line "Pika unattended…"
 	done
 
 JasmineGetSomeMedicineText:
@@ -192,7 +192,7 @@ JasmineGetSomeMedicineText:
 JasmineCureAmphyText:
 	text "JASMINE: …Will"
 	line "that medicine cure"
-	cont "AMPHY?"
+	cont "PIKA?"
 	done
 
 PlayerHandedSecretpotionText:
@@ -206,7 +206,7 @@ JasmineDontBeOffendedText:
 	line "please don't be"
 	cont "offended…"
 
-	para "…AMPHY will not"
+	para "…PIKA will not"
 	line "take anything from"
 	cont "anyone but me…"
 	done
@@ -214,7 +214,7 @@ JasmineDontBeOffendedText:
 JasmineAmphyHowAreYouFeelingText:
 	text "JASMINE: …"
 
-	para "AMPHY, how are you"
+	para "PIKA, how are you"
 	line "feeling?"
 	done
 
@@ -237,12 +237,12 @@ JasmineISeeText:
 	done
 
 JasmineAmphyHangOnText:
-	text "…AMPHY, hang on!"
+	text "…PIKA, hang on!"
 	done
 
 AmphyPalPalooText:
-	text "AMPHY: …"
-	line "…Pa… paloo…"
+	text "PIKA: …"
+	line "…Ka… chu…"
 	done
 
 AmphyBreathingLaboredText:
@@ -251,8 +251,8 @@ AmphyBreathingLaboredText:
 	done
 
 AmphyPaluPaluluText:
-	text "AMPHY: Palu!"
-	line "Palulu!"
+	text "PIKA: Pika!"
+	line "Chu!"
 	done
 
 OlivineLighthouse6F_MapEvents:

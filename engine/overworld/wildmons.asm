@@ -489,11 +489,11 @@ InitRoamMons:
 ; initialize wRoamMon structs
 
 ; species
-	ld a, RAIKOU
+	ld a, JOLTEON
 	ld [wRoamMon1Species], a
-	ld a, ENTEI
+	ld a, FLAREON
 	ld [wRoamMon2Species], a
-	ld a, SUICUNE
+	ld a, VAPOREON
 	ld [wRoamMon3Species], a
 
 ; level

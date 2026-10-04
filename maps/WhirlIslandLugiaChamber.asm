@@ -26,14 +26,14 @@ Lugia:
 	faceplayer
 	opentext
 	writetext LugiaText
-	cry LUGIA
+	cry ARTICUNO
 	pause 15
 	closetext
 	setevent EVENT_FOUGHT_LUGIA
 	checkver
 	iftrue .Silver
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon LUGIA, 70
+	loadwildmon ARTICUNO, 70
 	startbattle
 	disappear WHIRLISLANDLUGIACHAMBER_LUGIA
 	reloadmapafterbattle
@@ -41,14 +41,14 @@ Lugia:
 
 .Silver:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon LUGIA, 40
+	loadwildmon ARTICUNO, 40
 	startbattle
 	disappear WHIRLISLANDLUGIACHAMBER_LUGIA
 	reloadmapafterbattle
 	end
 
 LugiaText:
-	text "Gyaaas!"
+	text "Gyaoo!"
 	done
 
 WhirlIslandLugiaChamber_MapEvents:
@@ -62,4 +62,4 @@ WhirlIslandLugiaChamber_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  9,  5, SPRITE_LUGIA, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Lugia, EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_LUGIA
+	object_event  9,  5, SPRITE_BIRD, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Lugia, EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_LUGIA

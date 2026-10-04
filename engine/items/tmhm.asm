@@ -150,7 +150,6 @@ TeachTMHM:
 
 	ld c, HAPPINESS_LEARNMOVE
 	callfar ChangeHappiness
-	call ConsumeTM
 	jr .learned_move
 
 .nope
@@ -515,6 +514,7 @@ VerboseReceiveTMHM: ; unreferenced
 	ret
 
 ConsumeTM:
+	ret
 	call ConvertCurItemIntoCurTMHM
 	ld a, [wTempTMHM]
 	dec a

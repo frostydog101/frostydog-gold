@@ -26,14 +26,14 @@ TinTowerHoOh:
 	faceplayer
 	opentext
 	writetext HoOhText
-	cry HO_OH
+	cry MOLTRES
 	pause 15
 	closetext
 	setevent EVENT_FOUGHT_HO_OH
 	checkver
 	iftrue .Silver
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon HO_OH, 40
+	loadwildmon MOLTRES, 40
 	startbattle
 	disappear TINTOWERROOF_HO_OH
 	reloadmapafterbattle
@@ -41,14 +41,14 @@ TinTowerHoOh:
 
 .Silver:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon HO_OH, 70
+	loadwildmon MOLTRES, 70
 	startbattle
 	disappear TINTOWERROOF_HO_OH
 	reloadmapafterbattle
 	end
 
 HoOhText:
-	text "Shaoooh!"
+	text "Gyaoo!"
 	done
 
 TinTowerRoof_MapEvents:
@@ -62,4 +62,4 @@ TinTowerRoof_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  9,  5, SPRITE_HO_OH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHoOh, EVENT_TIN_TOWER_ROOF_HO_OH
+	object_event  9,  5, SPRITE_BIRD, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHoOh, EVENT_TIN_TOWER_ROOF_HO_OH

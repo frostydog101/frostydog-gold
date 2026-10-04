@@ -24,7 +24,7 @@ VioletPokecenter1F_ElmsAideScript:
 	iffalse .RefusedEgg
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .PartyFull
-	giveegg TOGEPI, EGG_LEVEL
+	giveegg DRATINI, EGG_LEVEL
 	getstring STRING_BUFFER_4, .eggname
 	scall .AideGivesEgg
 	setevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
